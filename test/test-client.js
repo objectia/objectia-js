@@ -7,8 +7,6 @@ const should = chai.should()
 
 const ObjectiaClient = require('../lib/index')
 
-//env var: GITLAB_CI
-
 const client = new ObjectiaClient({
   apiKey: 'test',
 })
