@@ -15,6 +15,12 @@ const client = new ObjectiaClient({
 
 describe('Client', function () {
 
+  it('should get client version', async function () {
+    let v = client.getVersion()
+    should.exist(v)
+    v.should.be.a('string')
+  })
+
   it('should get geo location', async function () {
     try {
       let resp = await client.geoLocation.get('8.8.8.8')
@@ -70,6 +76,16 @@ describe('Client', function () {
       let locations = resp.data
       locations.should.be.an('array')
       assert.equal(locations.length, 2)
+    } catch (err) {
+      should.not.exist(err)
+    }
+  })
+
+  it('should get usage data', async function () {
+    try {
+      let resp = await client.usage.get()
+      should.exist(resp)
+      resp.should.be.an('object')
     } catch (err) {
       should.not.exist(err)
     }
