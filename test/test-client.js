@@ -7,9 +7,20 @@ const should = chai.should()
 
 const ObjectiaClient = require('../lib/index')
 
+class Logger {
+  log(s) {
+    //console.log(s)
+  }
+  error(s) {
+    //console.error(s)
+  }
+}
+
+
 const client = new ObjectiaClient({
   apiKey: 'test',
-  //logger: console,
+  //  logger: console,
+  logger: new Logger(),
 })
 
 describe('Client', function () {
