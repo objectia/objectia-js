@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Objectia-js</title>
+
+    <script src="../dist/objectia.min.js"></script>
+
+    <script>
+        var client = new ObjectiaClient({
+            apiKey: "7867696767"
+        });
+
+        function get_post() {
+            client.posts.read("1")
+                .then(function (res) {
+                    console.log(res);
+                })
+                .catch(function (err) {
+                    console.error(err);
+                });
+        }
+
+        function create_post() {
+            var params = {
+                userId: 999,
+                title: "Test",
+                body: "This is the body"
+            };
+
+            client.posts.create(params)
+                .then(function (res) {
+                    console.log(res);
+                })
+                .catch(function (err) {
+                    console.error(err);
+                });
+        }
+
+        function update_post() {
+            var params = {
+                title: "Test",
+                body: "This is the body"
+            };
+            client.posts.update("1", params)
+                .then(function (res) {
+                    console.log(res);
+                })
+                .catch(function (err) {
+                    console.error(err);
+                });
+        }
+
+        function delete_post() {
+            client.posts.remove("1")
+                .then(function (res) {
+                    console.log(res);
+                })
+                .catch(function (err) {
+                    console.error(err);
+                });
+        }
+
+        function delete_post_404() {
+            client.posts.del("12432423423")
+                .then(function (res) {
+                    console.log(res);
+                })
+                .catch(function (err) {
+                    console.error(err);
+                });
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="get_post()">GET POST</button>
+    <button onclick="create_post()">CREATE POST</button>
+    <button onclick="update_post()">UPDATE POST</button>
+    <button onclick="delete_post()">DELETE POST</button>
+    <button onclick="delete_post_404()">DELETE POST (404)</button>
+
+</html>

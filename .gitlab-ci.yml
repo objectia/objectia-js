@@ -1,0 +1,51 @@
+image: node:latest
+
+cache:
+  paths:
+  - node_modules/
+
+stages:
+#- build
+- test
+#- deploy
+
+before_script:
+- npm install -g codecov
+- npm install
+
+#build:
+#  stage: build
+#  script: 
+#  - npm install
+#  artifacts:
+#    paths:
+#    - dist/
+#    expire_in: 1 month
+
+test:node8:
+  stage: test
+  image: node:8
+  script:
+  - node --harmony ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --reporter test -- -R spec
+  - codecov --token=1765c18b-9f9d-45f8-a97e-9c7f5233f389
+  tags:
+  - docker
+
+test:node9:
+  stage: test
+  image: node:9
+  script:
+  - node --harmony ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --reporter test -- -R spec
+  - codecov --token=1765c18b-9f9d-45f8-a97e-9c7f5233f389
+  tags:
+  - docker
+
+test:node10:
+  stage: test
+  image: node:10
+  script:
+  - node --harmony ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --reporter test -- -R spec
+  - codecov --token=1765c18b-9f9d-45f8-a97e-9c7f5233f389
+  tags:
+  - docker
+

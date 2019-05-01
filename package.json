@@ -1,0 +1,33 @@
+{
+  "name": "objectia-js",
+  "version": "0.9.1",
+  "description": "Javascript client for Objectia API",
+  "main": "lib/index.js",
+  "homepage": "https://github.com/objectia/objectia-js",
+  "keywords": [],
+  "author": "Objectia",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha",
+    "develop": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/objectia/objectia-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/objectia/objectia-js/issues"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^5.2.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.0.5",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0"
+  }
+}
