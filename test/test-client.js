@@ -9,6 +9,7 @@ const ObjectiaClient = require('../lib/index')
 
 const client = new ObjectiaClient({
   apiKey: 'test',
+  //logger: console,
 })
 
 describe('Client', function () {
@@ -68,7 +69,7 @@ describe('Client', function () {
 
   it('should get multiple geo locations', async function () {
     try {
-      let resp = await client.geoLocation.get('8.8.8.8,google.com')
+      let resp = await client.geoLocation.getBulk('8.8.8.8,google.com')
       should.exist(resp)
       resp.should.be.an('object')
       let locations = resp.data
