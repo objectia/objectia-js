@@ -13,13 +13,13 @@ See the [Javascript API docs](https://docs.objectia.com/guide/javascript.html).
 ## Installation
 
 ```bash
-$ yarn add @objectia/objectia-js
+$ yarn add objectia-js
 ```    
 
 or
 
 ```bash
-$ npm install @objectia/objectia-js
+$ npm install --save objectia-js
 ```    
 
 
@@ -28,7 +28,16 @@ $ npm install @objectia/objectia-js
 The library needs to be configured with your account's API key. Get your own API key by signing up for a free [Objectia account](https://objectia.com).
 
 ```javascript
-// sample goes here....
+const ObjectiaClient = require('objectia-js')
+
+try {
+    let resp = await client.geoLocation.get('8.8.8.8')
+    let location = resp.data
+    console.log('Country: ' + location.country_name)       // prints "United States"
+    console.log('Country code: ' + location.country_code)  // and    "US"
+} catch (err) {
+    // handle error
+}
 ```
 
 
