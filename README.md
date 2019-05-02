@@ -37,8 +37,7 @@ const client = new objectia({
 })
 
 try {
-    let resp = await client.geoLocation.get('8.8.8.8')
-    let location = resp.data
+    let location = await client.geoip.get('8.8.8.8')
     console.log('Country: ' + location.country_name)       // prints "United States"
     console.log('Country code: ' + location.country_code)  // and    "US"
 } catch (err) {

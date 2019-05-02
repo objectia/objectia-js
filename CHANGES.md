@@ -1,6 +1,0 @@
-# CHANGES
-
-## <version> - <date>
-* <Comment>
-
-
