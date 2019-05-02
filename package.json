@@ -1,5 +1,5 @@
 {
-  "name": "objectia",
+  "name": "objectia-js",
   "version": "0.9.2",
   "description": "Javascript client for Objectia API",
   "main": "lib/index.js",

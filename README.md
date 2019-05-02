@@ -15,13 +15,13 @@ See the [Javascript API docs](https://docs.objectia.com/guide/javascript.html).
 With yarn
 
 ```bash
-$ yarn add objectia-js
+$ yarn add objectia
 ```    
 
 With npm
 
 ```bash
-$ npm install objectia-js --save 
+$ npm install objectia --save 
 ```    
 
 
@@ -30,9 +30,9 @@ $ npm install objectia-js --save
 The library needs to be configured with your account's API key. Get your own API key by signing up for a free [Objectia account](https://objectia.com).
 
 ```javascript
-const ObjectiaClient = require('objectia-js')
+const objectia = require('objectia')
 
-const client = new ObjectiaClient({
+const client = new objectia({
   apiKey: 'YOUR-API-KEY',
 })
 
