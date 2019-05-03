@@ -1,7 +1,7 @@
 .PHONY: test deploy
 
 test:
-	npm test
+	yarn test
 
 deploy:
-	npm publish --access public
+	yarn publish --access public
