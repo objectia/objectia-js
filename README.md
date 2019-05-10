@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/objectia/objectia-js.svg?branch=master)](https://travis-ci.org/objectia/objectia-js) 
 <!-- [![codecov](https://codecov.io/gh/objectia/objectia-js/branch/master/graph/badge.svg)](https://codecov.io/gh/objectia/objectia-js) -->
 
-Javascript client for [Objectia API](https://objectia.com)
+Javascript client for [Objectia API](https://objectia.com)&reg;
 
  
 ## Documentation
