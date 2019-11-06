@@ -5,7 +5,7 @@ const assert = chai.assert
 const expect = chai.expect
 const should = chai.should()
 
-const validate = require("../lib/validator")
+const validate = require("../lib/internal/validator")
 
 let schema = {
   "name": "Message",
