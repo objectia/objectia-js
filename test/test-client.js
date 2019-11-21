@@ -31,6 +31,16 @@ describe('Client', function () {
     }
   })
 
+  it('should get geo location using promise', function () {
+    client.geoip.get("8.8.8.8").then((location) => {
+      should.exist(location)
+      location.should.be.an('object')
+      location.country_code.should.be.equal('US')
+    }).catch((err) => {
+      should.not.exist(err)
+    })
+  })
+
   it('should get geo location with options', async function () {
     try {
       let location = await client.geoip.get('8.8.8.8', {
