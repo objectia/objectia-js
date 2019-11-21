@@ -56,7 +56,7 @@ describe('Client', function () {
 
   it('should fail get geo location for invalid IP', async function () {
     try {
-      let location = await client.geoip.get('288.8.8.8')
+      let location = await client.geoip.get('x')
       should.not.exist(location)
     } catch (err) {
       should.exist(err)
