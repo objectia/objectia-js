@@ -7,7 +7,7 @@ Javascript client for [Objectia API](https://objectia.com)&reg;
  
 ## Documentation
 
-See the [Javascript API docs](https://docs.objectia.com/guide/javascript.html).
+See the [Javascript API docs](https://docs.objectia.com/js/).
 
 
 ## Installation
